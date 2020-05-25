@@ -1,6 +1,7 @@
 ## 使用方法
 
 1. 下载配置文件
+
    <https://raw.githubusercontent.com/lhldegit/LRules/master/Quantumult%20X/LQX.conf>
 
 2. 替换配置文本`[server_remote]`中的`https://www.example.com/example1`替换为您的订阅链接
