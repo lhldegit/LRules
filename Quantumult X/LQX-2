@@ -20,7 +20,7 @@ server=223.5.5.5
 available=🍮健康, G03 HK01, G03 HK02, G03 HK03, G03 HK04, G03 HK05, G03 HK06, G03 HK07, G03 HK08, G03 HK09, G03 HK10, G03 HK11, G03 HK12, G03 HK13, G03 SGP01, G03 SGP02, G03 SGP03, G03 SGP04, G03 JP01, G03 JP02, G03 JP03, G03 JP04, G03 TW01, G03 TW02, G03 US01, G03 US02, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
 available=🎧版权解锁, 🎧 解锁网易云音乐1, 🎧 解锁网易云音乐2, 🎧 解锁网易云音乐3, 🎧 解锁网易云音乐4, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
 available=台湾, G03 TW01, G03 TW02, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Available.png
-static=Bahamut, 台湾, G03 TW01, G03 TW02, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Bahamut.png
+static=Bahamut, 台湾, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Bahamut.png
 static=AdBlock, reject, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Reject.png
 static=Apple_API, Domestic, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Apple.png
 static=Apple_CDN, Domestic, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/App_Store.png
