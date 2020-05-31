@@ -31,6 +31,7 @@ static=Global, 🍮健康, img-url=https://raw.githubusercontent.com/Koolson/Qur
 static=Netease Music, 🎧版权解锁, Domestic, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Netease_Music.png
 
 
+
 #############################################
 [server_remote]
 
@@ -39,7 +40,6 @@ static=Netease Music, 🎧版权解锁, Domestic, img-url=https://raw.githubuser
 https://www.example.com/example1, tag=布丁网络加速, as-policy=static, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/pud.png, update-interval=86400, opt-parser=false, enabled=true
 
 https://dove.589669.xyz/all2quanx?&sub=https%3A%2F%2Fraw.githubusercontent.com%2Fssooenftzero%2F0X%2Fmaster%2FTube%2F2very%2520good%2F2very%2520good, tag=好奇科技坞, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Server.png
-
 
 
 
@@ -202,6 +202,7 @@ final, Global
 #打开微信小程序 进入”活动抽奖“，手动签到一次或点击”已签到“
 4 0 * * * nzw9314/Task/WeChatLottery_new.js, enabled=true
 4 12 * * * nzw9314/Task/WeChatLottery_new.js, enabled=true
+
 
 
 #############################################
