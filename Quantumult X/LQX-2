@@ -27,7 +27,7 @@ static=Apple_CDN, Domestic, img-url=https://raw.githubusercontent.com/Koolson/Qu
 static=AsianMedia, Domestic, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/DomesticMedia.png
 static=GlobalMedia, Global, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/GlobalMedia.png
 static=Domestic, direct, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Domestic.png
-static=Global, 🍮健康, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Global.png
+static=Global, 🍮健康, 布丁网络加速, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Global.png
 static=Netease Music, 🎧版权解锁, Domestic, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Netease_Music.png
 
 
