@@ -63,9 +63,9 @@ https://raw.githubusercontent.com/GeQ1an/Rules/master/QuantumultX/Filter/Optiona
 
 #############################################
 [rewrite_remote]
-https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Rewrite.txt
-https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Js_local_WorkingCopy.conf
-https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Get_Cookie_New.conf
+https://raw.githubusercontent.com/eHpo1/Rules/master/QuantumultX/Rewrite.txt, tag=eHpo1 Rewrite
+https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Js_local_WorkingCopy.conf, tag=Script, enabled=true
+https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Get_Cookie_New.conf, tag=Cookie, enabled=false
 
 
 
