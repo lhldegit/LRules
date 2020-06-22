@@ -1,6 +1,6 @@
 1. 从URL下载配置文件
 
-   <https://raw.githubusercontent.com/lhldegit/LRules/master/Loon/LLoon.conf>
+   <https://raw.githubusercontent.com/lhldegit/LRules/master/Loon/LLoon123.conf>
 
 2. 继续编辑，将配置文本`[Remote Proxy]`中的`https://www.example.com/example1.txt`替换为您的订阅链接
 
