@@ -28,23 +28,24 @@ host = 127.0.0.1
 # 自用推荐机场:  https://pud.life/aff/6YB1  复制链接打开注册使用
 
 布丁网络加速 = https://www.example.com/example1.txt
+233云加速 = https://www.example.com/example2.txt
 NMusic = https://git.io/JfNq3
 
 
 
 ###############################################
 [Remote Filter]
-台湾 = NameRegex,布丁网络加速, FilterKey = "台湾|TW"
-香港 = NameRegex,布丁网络加速, FilterKey = "香港|HK"
-筛选除外 = NameRegex,布丁网络加速, FilterKey = "^(?!.*(关键词1|关键词2|关键词3)).*$"
+台湾 = NameRegex,布丁网络加速,233云加速, FilterKey = "台湾|TW"
+香港 = NameRegex,布丁网络加速,233云加速, FilterKey = "香港|HK"
+筛选除外 = NameRegex,布丁网络加速,233云加速, FilterKey = "^(?!.*(关键词1|关键词2|关键词3)).*$"
 
 
 
 ###############################################
 [Proxy Group]
-Global = select, Auto, Fallback, 布丁网络加速
-Auto = url-test, 布丁网络加速, url = http://bing.com/,interval = 600
-# Fallback = fallback, 布丁网络加速, url = http://bing.com/,interval = 600
+Global = select, Auto, Fallback, 布丁网络加速, 233云加速
+Auto = url-test, 布丁网络加速, 233云加速, url = http://bing.com/,interval = 600
+# Fallback = fallback, 布丁网络加速, 233云加速, url = http://bing.com/,interval = 600
 
 Netease Music = select, Domestic, 🎧Music1, 🎧Music2, 🎧Music3, 🎧Music4, 🎧Music5, 🎧Music6, 🎧Music7, 🎧Music8, 🎧Music9, NMusic
 
