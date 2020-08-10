@@ -156,6 +156,12 @@ https://raw.githubusercontent.com/lhldegit/LRules/master/Loon/LCookie.conf, tag=
 
 
 ###############################################
+[Plugin]
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Advertising.plugin, proxy=Global, tag=神机规则, enabled=true
+
+
+
+###############################################
 [MITM]
 hostname = *.googlevideo.com,api.1sapp.com
 
