@@ -104,6 +104,29 @@ https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Tide.list,AdBlock
 
 
 ###############################################
+[Host]
+*.tmall.com = server:223.6.6.6
+*.jd.com = server:119.28.28.28
+*.qq.com = server:119.28.28.28
+*.tencent.com = server:119.28.28.28
+*.alicdn.com = server:223.5.5.5
+*.aliyun.com = server:223.5.5.5
+*.weixin.com = server:119.28.28.28
+*.bilibili.com = server:119.29.29.29
+*.hdslb.com = server:119.29.29.29
+*.163.com = server:119.29.29.29
+*.126.com = server:119.29.29.29
+*.126.net = server:119.29.29.29
+*.127.net = server:119.29.29.29
+*.netease.com = server:119.29.29.29
+*.mi.com = server:119.29.29.29
+*.xiaomi.com = server:119.29.29.29
+*.pcbeta.com = 120.52.19.113
+*.testflight.apple.com = server:8.8.4.4
+
+
+
+###############################################
 [Url Rewrite]
 enable = true
 # Redirect Google Search Service
@@ -142,13 +165,13 @@ enable = true
 
 ###############################################
 [Remote Script]
-https://raw.githubusercontent.com/Tartarus2014/Loon/master/Script.conf, enabled=true
-https://raw.githubusercontent.com/Tartarus2014/Loon/master/Task.conf, enabled=false
-https://raw.githubusercontent.com/Tartarus2014/Loon/master/Cookie.conf, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Script.conf, tag=Tartarus2014Script, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Task.conf, tag=Tartarus2014Task, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Cookie.conf, tag=Tartarus2014Cookie, enabled=false
 
-https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=Script, enabled=false
-https://raw.githubusercontent.com/nzw9314/Loon/master/Task.conf, tag=Task, enabled=false
-https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, enabled=false
+https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=nzw9314Script, enabled=false
+https://raw.githubusercontent.com/nzw9314/Loon/master/Task.conf, tag=nzw9314Task, enabled=false
+https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=nzw9314Cookie, enabled=false
 
 https://raw.githubusercontent.com/lhldegit/LRules/master/Loon/LScript.conf, tag=LScript, enabled=false
 https://raw.githubusercontent.com/lhldegit/LRules/master/Loon/LTask.conf, tag=LTask, enabled=false
