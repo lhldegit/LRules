@@ -129,7 +129,6 @@ enable = true
 [Remote Rewrite]
 https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf,eHpo Rewrite, enabled=true
 https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.list,GeQ1an Rewrite, enabled=true
-https://raw.githubusercontent.com/ssooenftzero/0X/master/Loon/conf/loonnowshremoterewrite.conf, tag=官方复写好奇整合, enabled=true
 https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NobyDa Rewrite, enabled=true
 https://raw.githubusercontent.com/nzw9314/Loon/master/Q-Search_All_in_one.conf,Q-Search_All_in_one, enabled=false
 
@@ -138,16 +137,16 @@ https://raw.githubusercontent.com/nzw9314/Loon/master/Q-Search_All_in_one.conf,Q
 ###############################################
 [Script]
 enable = true
-# > 趣头条
-http-request ^https:\/\/api\.1sapp\.com\/sign\/info? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js, timeout=10, tag=qtt.cookie.js
-http-request ^https:\/\/api\.1sapp\.com\/content\/readV2? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js, timeout=10, tag=qtt.cookie.js
-http-request ^https:\/\/api\.1sapp\.com\/x\/feed\/getReward? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qtt/qtt.cookie.js, timeout=10, tag=qtt.cookie.js
 
 
 
 ###############################################
 [Remote Script]
-https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=Script, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Script.conf, enabled=true
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Task.conf, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/Loon/master/Cookie.conf, enabled=false
+
+https://raw.githubusercontent.com/nzw9314/Loon/master/Script.conf, tag=Script, enabled=false
 https://raw.githubusercontent.com/nzw9314/Loon/master/Task.conf, tag=Task, enabled=false
 https://raw.githubusercontent.com/nzw9314/Loon/master/Cookie.conf, tag=Cookie, enabled=false
 
@@ -165,7 +164,7 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Ad
 
 ###############################################
 [MITM]
-hostname = *.googlevideo.com,api.1sapp.com
+hostname = *.googlevideo.com
 
 
 
