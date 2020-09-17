@@ -62,13 +62,13 @@ NMusic = https://git.io/JfNq3
 [Proxy Group]
 Global = select, Auto, Fallback, 布丁网络加速, 233云加速
 Auto = url-test, 布丁网络加速, 233云加速, url = http://www.gstatic.com/generate_204,interval = 600
-Fallback = fallback, 布丁网络加速, 233云加速, url = http://www.gstatic.com/generate_204,interval = 600
+# Fallback = fallback, 布丁网络加速, 233云加速, url = http://www.gstatic.com/generate_204,interval = 600
 
 Netease Music = select, Domestic, NMusic, 🎧Music1, 🎧Music2, 🎧Music3, 🎧Music4, 🎧Music5, 🎧Music6, 🎧Music7, 🎧Music8, 🎧Music9
 
 StreamingSE = select, Domestic, AutoHK, AutoTW
 Bahamut = select, AutoTW
-AutoHK = url-test, 香港, url = http://www.gstatic.com/generate_204,interval = 600
+# AutoHK = url-test, 香港, url = http://www.gstatic.com/generate_204,interval = 600
 AutoTW = url-test, 台湾, url = http://www.gstatic.com/generate_204,interval = 600
 
 Domestic = select, DIRECT
@@ -212,7 +212,7 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Un
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Unlock/TikTokJP.plugin, tag=TikTok JP, enabled=false
 
 # YouTube
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/YouTubeAds.plugin, proxy=AdBlock, tag=YouTube enabled=false
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/YouTubeAds.plugin, proxy=AdBlock, tag=YouTube, enabled=false
 
 # 知乎
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/ZhiHu.plugin, proxy=AdBlock, tag=知乎, enabled=true
