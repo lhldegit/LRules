@@ -1,10 +1,28 @@
+# 想要去除YouTube开头5S广告 插件订阅：https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/YouTubeAds.plugin
+
+# 订阅解析器使用方法：
+# https://sub-store.vercel.app/  添加到桌面，之后就可以添加订阅了。注意修改订阅之后需要手动保存。订阅界面单击可以预览节点，右侧菜单复制链接到APP即可使用。
+
+# 云音乐解锁规则, 节点远程订阅, 默认直连, 可在策略组手动开启。
+# =请使用 Safari 浏览器访问网站。首先下载 证书, 进入「设置」>「通用」>「描述文件」, 安装「UnblockNeteaseMusic Root CA」, 并在「设置」>「通用」>「关于本机」>「证书信任设置」开启对「UnblockNeteaseMusic Root CA」的信任。
+# =证书链接：https://cdn.jsdelivr.net/gh/nondanee/UnblockNeteaseMusic@master/ca.crt
+# 国内媒体策略为解锁B站地区, 默认直连, 切换 媒体解锁 即为解锁模式。
+# 增加动画疯分流, 默认走台湾。
+
+
+
 ###############################################
 [General]
-skip-proxy = 10.0.0.0/8, 127.0.0.0/8, 169.254.0.0/16, 192.0.2.0/24, 192.168.0.0/16, 198.51.100.0/24, 224.0.0.0/4, *.local, localhostlocal
-bypass-tun = 10.0.0.0/8, 127.0.0.0/8, 169.254.0.0/16, 192.0.2.0/24, 192.168.0.0/16, 198.51.100.0/24, 224.0.0.0/4
-dns-server = 1.2.4.8,119.29.29.29,223.5.5.5,system
-allow-udp-proxy = true
-host = 127.0.0.1
+ipv6 = false
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+dns-server = system,1.2.4.8,119.29.29.29,223.5.5.5,114.114.114.114
+allow-udp-proxy = false
+allow-wifi-access = false
+wifi-access-http-port = 7222
+wifi-access-socket5-port = 7221
+proxy-test-url = http://www.gstatic.com/generate_204
+test-timeout = 3
 
 
 
@@ -35,71 +53,66 @@ NMusic = https://git.io/JfNq3
 
 ###############################################
 [Remote Filter]
-台湾 = NameRegex,布丁网络加速,233云加速, FilterKey = "台湾|TW"
-香港 = NameRegex,布丁网络加速,233云加速, FilterKey = "香港|HK"
-筛选除外 = NameRegex,布丁网络加速,233云加速, FilterKey = "^(?!.*(关键词1|关键词2|关键词3)).*$"
+台湾 = NameRegex,布丁网络加速,233云加速, FilterKey = "(?i)(台|TW|Tai)"
+香港 = NameRegex,布丁网络加速,233云加速, FilterKey = "(?i)(港|HK|Hong)"
 
 
 
 ###############################################
 [Proxy Group]
 Global = select, Auto, Fallback, 布丁网络加速, 233云加速
-Auto = url-test, 布丁网络加速, 233云加速, url = http://bing.com/,interval = 600
-# Fallback = fallback, 布丁网络加速, 233云加速, url = http://bing.com/,interval = 600
+Auto = url-test, 布丁网络加速, 233云加速, url = http://www.gstatic.com/generate_204,interval = 600
+Fallback = fallback, 布丁网络加速, 233云加速, url = http://www.gstatic.com/generate_204,interval = 600
 
-Netease Music = select, Domestic, 🎧Music1, 🎧Music2, 🎧Music3, 🎧Music4, 🎧Music5, 🎧Music6, 🎧Music7, 🎧Music8, 🎧Music9, NMusic
+Netease Music = select, Domestic, NMusic, 🎧Music1, 🎧Music2, 🎧Music3, 🎧Music4, 🎧Music5, 🎧Music6, 🎧Music7, 🎧Music8, 🎧Music9
 
 StreamingSE = select, Domestic, AutoHK, AutoTW
 Bahamut = select, AutoTW
-AutoHK = url-test, 香港, url = http://bing.com/,interval = 600
-AutoTW = url-test, 台湾, url = http://bing.com/,interval = 600
+AutoHK = url-test, 香港, url = http://www.gstatic.com/generate_204,interval = 600
+AutoTW = url-test, 台湾, url = http://www.gstatic.com/generate_204,interval = 600
 
 Domestic = select, DIRECT
 AdBlock = select, REJECT
-
-# http://www.gstatic.com/generate_204
 
 
 
 ###############################################
 [Rule]
 GEOIP,CN,Domestic
-FINAL,Global,dns-failed
+FINAL,Domestic
+
+# Epic 代理
 DOMAIN,rsshub.app,Global
-IP-CIDR,8.8.8.8/32,Global
+
+# 微信表情包问题
+IP-CIDR,182.254.116.0/24,Domestic
 
 
 
 ###############################################
 [Remote Rule]
-# Unbreak 后续规则修正
+# > Ad Block
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Reject.list,AdBlock
+
+# FINAL
 https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Unbreak.list,Domestic
 
-# Advertising 广告
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Advertising.list,AdBlock
-# Privacy 隐私
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Privacy.list,AdBlock
-# Hijacking 运营商劫持或恶意网站
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Guard/Hijacking.list,AdBlock
+# > 苹果服务
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Apple.list,Domestic
+https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Extra/Apple/TestFlight.list,Domestic
 
-# Streaming 国际流媒体服务
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/Streaming.list,Global
-# StreamingSE 中国流媒体服务（面向海外版本）
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/StreamingMedia/StreamingSE.list,StreamingSE
-
-# Global 全球加速
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/Global.list,Global
-# China 中国直连
-https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Ruleset/China.list,Domestic
-
-# Antirevoke(无视证书失效)
-https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Antirevoke.list,AdBlock
-
-https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netease%20Music.list,Netease Music
+# > Bahamut
 https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bahamut.list,Bahamut
-https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Reject.list,AdBlock
-https://raw.githubusercontent.com/eHpo1/Rules/master/Surge4/Ruleset/Liby.list,AdBlock
-https://raw.githubusercontent.com/nzw9314/Surge/master/Ruleset/Tide.list,AdBlock
+
+# 港澳台限定
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/iQiyi.list,StreamingSE
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bilibili.list,StreamingSE
+
+# 国外网站
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list,Global
+
+# 国内网站
+https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list,Domestic
 
 
 
@@ -137,22 +150,13 @@ enable = true
 (?<=&app_version=)16..(?=.?.?&) 1 307
 (?<=\?version_code=)16..(?=.?.?&) 1 307
 
-# 抖音 去广告&水印
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/feed\/ https://aweme.snssdk.com/aweme/v1/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/aweme\/post\/ https://aweme.snssdk.com/aweme/v1/aweme/post/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/follow\/feed\/ https://aweme.snssdk.com/aweme/v1/follow/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/nearby\/feed\/ https://aweme.snssdk.com/aweme/v1/nearby/feed/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/search\/item\/ https://aweme.snssdk.com/aweme/v1/search/item/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/general\/search\/single\/ https://aweme.snssdk.com/aweme/v1/general/search/single/ header
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/hot/search\/video\/list\/ https://aweme.snssdk.com/aweme/v1/hot/search/video/list/ header
-
 
 
 ###############################################
 [Remote Rewrite]
-https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf,eHpo Rewrite, enabled=true
-https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.list,GeQ1an Rewrite, enabled=true
-https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NobyDa Rewrite, enabled=true
+https://raw.githubusercontent.com/eHpo1/Rules/master/Loon/Rewrite.conf,eHpo Rewrite, enabled=false
+https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.list,GeQ1an Rewrite, enabled=false
+https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Rewrite_lhie1.conf, tag=NobyDa Rewrite, enabled=false
 https://raw.githubusercontent.com/nzw9314/Loon/master/Q-Search_All_in_one.conf,Q-Search_All_in_one, enabled=false
 
 
@@ -182,6 +186,42 @@ https://raw.githubusercontent.com/lhldegit/LRules/master/Loon/LCookie.conf, tag=
 ###############################################
 [Plugin]
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Advertising.plugin, proxy=Global, tag=神机规则, enabled=true
+
+# NeteaseMusic
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Netease%20Music.plugin, proxy=Netease Music, tag=网易云音乐, enabled=true
+
+# Boxjs （入口 http://boxjs.net (http://boxjs.net/)）
+https://gitee.com/chavyleung/scripts/raw/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, tag=Boxjs, enabled=true
+
+# 订阅解析器 （https://sub-store.vercel.app/ 添加到桌面，之后就可以添加订阅了。注意修改订阅之后需要手动保存。订阅界面单击可以预览节点，右侧菜单复制链接到APP即可使用。）
+https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, tag=订阅解析器, enabled=true
+
+# Advertising
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Advertising.plugin, proxy=AdBlock, tag=Advertising, enabled=true
+
+# Host
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Host.plugin, tag=Host, enabled=true
+
+# General
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/General.plugin, tag=General, enabled=true
+
+# TikTok UK
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Unlock/TikTokUK.plugin, tag=TikTok UK, enabled=false
+
+# TikTok JP
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Unlock/TikTokJP.plugin, tag=TikTok JP, enabled=false
+
+# YouTube
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/YouTubeAds.plugin, proxy=AdBlock, tag=YouTube enabled=false
+
+# 知乎
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/ZhiHu.plugin, proxy=AdBlock, tag=知乎, enabled=true
+
+# 哔哩哔哩
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Bilibili.plugin, proxy=AdBlock, tag=哔哩哔哩, enabled=false
+
+# DouYin
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/DouYin.plugin, tag=DouYin, enabled=false
 
 
 
