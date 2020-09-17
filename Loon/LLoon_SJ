@@ -212,13 +212,13 @@ https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Un
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Unlock/TikTokJP.plugin, tag=TikTok JP, enabled=false
 
 # YouTube
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/YouTubeAds.plugin, proxy=AdBlock, tag=YouTube, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/YouTubeAds.plugin, proxy=AdBlock, tag=YouTube, enabled=true
 
 # 知乎
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/ZhiHu.plugin, proxy=AdBlock, tag=知乎, enabled=true
 
 # 哔哩哔哩
-https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Bilibili.plugin, proxy=AdBlock, tag=哔哩哔哩, enabled=false
+https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/Bilibili.plugin, proxy=AdBlock, tag=哔哩哔哩, enabled=true
 
 # DouYin
 https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Loon/Plugin/DouYin.plugin, tag=DouYin, enabled=false
