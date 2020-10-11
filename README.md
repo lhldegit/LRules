@@ -9,7 +9,7 @@
 
 ### Loon全局配置：
 
-* [Loon.conf](https://github.com/lhldegit/LRules/raw/master/Loon/LLoon.conf)
+* [Loon.conf](https://github.com/lhldegit/LRules/raw/master/Loon/LLoon6.conf)
 
 ### Quantumult X全局配置：
 
