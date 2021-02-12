@@ -7,13 +7,3 @@
 2. 替换配置文本`[server_remote]`中的`https://www.example.com/example1`替换为您的订阅链接
 
 3. 打开MitM开关 - 点击安装证书；然后到系统设置 - 已下载描述文件 - 安装；最后系统设置 - 通用 - 关于本机 - 证书信任设置，信任刚才安装的证书
-
-4. 商店版，需要用 Working Copy 挂载 nzw9314 的库
-
-   <https://github.com/nzw9314/QuantumultX.git>
-   
-5. 签到功能需要手动选择复制需要的
-
-   <https://raw.githubusercontent.com/nzw9314/QuantumultX/master/Task_Local.conf>
-
-   添加到配置文本`[Task_lock]`下
