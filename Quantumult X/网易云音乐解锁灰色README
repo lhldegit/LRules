@@ -1,0 +1,20 @@
+Quantumult X网易云音乐解锁灰色：
+
+第一步、下载CA证书，前往“设置-通用-描述文件”，安装「UnblockNeteaseMusic Root CA」，然后在“设置-通用-关于本机-证书信任设置”处开启对「UnblockNeteaseMusic Root CA」的信任。
+CA证书（复制到浏览器中打开）：https://github.com/nondanee/UnblockNeteaseMusic/raw/master/ca.crt
+
+第二步、添加网易云音乐策略组，分流订阅，以及解锁所需的节点。
+# 策略组
+[policy]
+static=UnblockNeteaseMusic, resource-tag-regex=NeteaseMusicserver, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netease.png
+
+# 远程分流规则订阅
+[filter_remote]
+https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Filter/NeteaseMusic.list, tag=UnblockNeteaseMusic, force-policy=UnblockNeteaseMusic, update-interval=86400, opt-parser=false, enabled=true
+
+# 服务器引用（机场订阅）
+[server_remote]
+https://raw.githubusercontent.com/ZhiYi-N/Private-Script/master/Quantumult%20X/wangyiyunjd.txt, tag=NeteaseMusicserver, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Netease.png, update-interval=86400, opt-parser=false, enabled=true
+
+
+
